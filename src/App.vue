@@ -63,7 +63,7 @@ export default {
       fixed: false,
       items: [{
         icon: 'bubble_chart',
-        title: 'Inspire',
+        title: 'Home',
         link: '/'
       },
       {
