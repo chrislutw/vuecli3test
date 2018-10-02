@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <section>
-      <v-parallax src="/img/hero.jpeg" height="600">
+      <v-parallax :src="`${baseUrl}img/hero.jpeg`" height="600">
         <v-layout
           column
           align-center
@@ -93,7 +93,7 @@
     </section>
 
     <section>
-      <v-parallax src="/img/section.jpg" height="380">
+      <v-parallax :src="`${baseUrl}img/section.jpg`" height="380">
         <v-layout column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
           <em>Kick-start your application today</em>
@@ -169,6 +169,11 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  data () {
+    return {
+      baseUrl: process.env.BASE_URL
+    }
+  }
 }
 </script>
